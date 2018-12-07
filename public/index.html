@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>GITHUB USERS</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://api.github.com/search/users?q=tom+repos:%3E42+followers:%3E1000"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="angular/angular.js"></script>
+        <script src="angular/angular-ui-router.js"></script>
+        <script src="js/app.js"></script>
+        <script src="directives/dirPagination.js"></script>
+        <script type="text/javascript"
+                src="https://cdn.rawgit.com/adonespitogo/angular-base64-upload/master/src/angular-base64-upload.js"></script>
+        <script src="services/userService.js"></script>
+        <script src="controllers/githubUsersController.js"></script>
+
+
+
+
+
+        <style>
+        .footer
+        {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+        }
+        </style>
+    </head>
+    <body ng-app="webapp">
+        <nav class="navbar navbar-inverse navbar-fixed-top employee" style="background-color: black">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <img src="images/image2.jpg" style="float:left " class="rounded float-left" alt="Cinque Terre" width="50" height="50">
+                    <a class="navbar-brand" href="#">Webpromotions</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a ui-sref="login"><span class="glyphicon glyphicon-user"></span> login</a></li>
+                    <li><a ui-sref="register"><span class="glyphicon glyphicon-log-in"></span>register</a></li>
+                </ul>
+            </div>
+        </nav>
+        <br/><br/>
+        <div class="container" ui-view>
+        </div>
+    </body>
+    <div class="footer">
+        <p>Footer</p>
+    </div>
+</html>
